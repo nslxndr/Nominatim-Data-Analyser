@@ -7,7 +7,7 @@ from analyser.core.qa_rule import ExecutionContext
 def test_same_wikidata_CFC(same_wikidata_CFC: SameWikiDataFeatureConverter) -> None:
     """
         Test the process() method of the custom pipe SameWikiDataFeatureConverter.
-        The method should be procuding a List of features with the right values 
+        The method should be producing a List of features with the right values 
         matching the expected_results.
     """
     data = [

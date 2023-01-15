@@ -9,7 +9,7 @@ def test_process_geojson_formatter(config: Config,
         Test the process() method of the GeoJSONFormatter.
         A temporary folder is used as the base folder.
 
-        the 'test_folder' doesn't exist initially and should be well
+        The 'test_folder' doesn't exist initially and should be well
         created by the method.
     """
     config.values['WebPrefixPath'] = 'test_prefix_path'

@@ -42,5 +42,5 @@ QUERY:
               updates: Every evening
               doc:
                 description: addr:housenumber without any digit in them.
-                why_problem: Normally house number are numbers. So, this layer tries to detect mapping mistakes by looking for house numbers that have no digits in them.
+                why_problem: Normally house numbers are numbers. So, this layer tries to detect mapping mistakes by looking for house numbers that have no digits in them.
                 how_to_fix: Check if the house number is correct or make sense. Either fix it or delete it.

@@ -15,14 +15,14 @@ This class contains one important abstract method which is implemented by each s
 def resolve(self, data: Dict) -> Any:
     """
         Assigns a concrete value to the dynamic value
-        based on the input data dictionnary.
+        based on the input data dictionary.
     """
     return
 ```
 
-The input data dictionnary are the data which will be used to resolve the dynamic value.
+The input data dictionary are the data which will be used to resolve the dynamic value.
 
-We can take the [Variable](../analyser/core/dynamic_value/variable.py) class as an example. The resolve method basically searchs for the `name` key in the input data dictionnary where `name` is the variable name given in the YAML Specification. The value corresponding to this key is then returned.
+We can take the [Variable](../analyser/core/dynamic_value/variable.py) class as an example. The resolve method basically searches for the `name` key in the input data dictionary where `name` is the variable name given in the YAML Specification. The value corresponding to this key is then returned.
 
 ## Resolver
 
@@ -49,7 +49,7 @@ def resolve_all(data_to_resolve: Any, resolver_data: Dict, ) -> Any:
     """
         Resolves the given data_to_resolve by resolving all data inside which are of type DynamicValue. The resolved data are resolved again if they also contain DynamicValue.
 
-        Parameter resolver_data is the data dictionnary used to resolve the dynamic values.
+        Parameter resolver_data is the data dictionary used to resolve the dynamic values.
     """
 ```
 

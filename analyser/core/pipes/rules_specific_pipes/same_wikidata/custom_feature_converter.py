@@ -10,7 +10,7 @@ class SameWikiDataFeatureConverter(Pipe):
             each result from the SQLProcessor contains
             multiple nodes.
 
-            data is a list of list of format:
+            Data is a list of list of format:
             [wikidata, List[ids], List[centroids]]
         """
         features: List[Feature] = list()

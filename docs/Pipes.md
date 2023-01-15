@@ -31,7 +31,7 @@ The `process_and_next` method runs the `process` method of the pipe and then exe
 
 ### extract_data
 
-The `extract_data` method is used to extract a value from the `data` dictionnary of the `pipe`. This `data` dictionnary is given as input when the `Pipe` class is instantiated. It contains all the data defined for this pipe in the [YAML Rule Specification](YAML-Rule-Specification.md).
+The `extract_data` method is used to extract a value from the `data` dictionary of the `pipe`. This `data` dictionary is given as input when the `Pipe` class is instantiated. It contains all the data defined for this pipe in the [YAML Rule Specification](YAML-Rule-Specification.md).
 
 If we have the following pipe specification in the YAML Rule Specification:
 
@@ -122,7 +122,7 @@ Executes an SQL query and returns the results as [RealDictCursor](https://www.ps
 
 ## GeometryConverter
 
-Converts the data contains in the `geometry_holder` of the input dictionnary to the geometry class of type `geometry_type`.
+Converts the data contains in the `geometry_holder` of the input dictionary to the geometry class of type `geometry_type`.
 
 **Class name (type)** -> `GeometryConverter`
 
@@ -130,9 +130,9 @@ Converts the data contains in the `geometry_holder` of the input dictionnary to 
 
 * `geometry_type` -> The geometry type to use.
 
-**Expected inputs** -> `Dictionnary` with one key equal to `geometry_holder` which should be a `string` of a [Well-known text representation of geometry](https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry).
+**Expected inputs** -> `Dictionary` with one key equal to `geometry_holder` which should be a `string` of a [Well-known text representation of geometry](https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry).
 
-**Output** -> `Dictionnary` with the `geometry_holder` modified.
+**Output** -> `Dictionary` with the `geometry_holder` modified.
 
 ## LoopDataProcessor
 
@@ -150,15 +150,15 @@ Processes each `data` of the input list through a `sub pipeline` and returns the
 
 ## GeoJSONFeatureConverter
 
-Converts a dictionnary of data containing at least the `geometry_holder` field to a `GeoJSON Feature` from the [geojson python package](https://github.com/jazzband/geojson).
+Converts a dictionary of data containing at least the `geometry_holder` field to a `GeoJSON Feature` from the [geojson python package](https://github.com/jazzband/geojson).
 
 **Class name (type)** -> `GeoJSONFeatureConverter`
 
 **Optional fields**:
 
-* `properties` -> `Dictionnary` of properties to add to the generated `Feature`.
+* `properties` -> `Dictionary` of properties to add to the generated `Feature`.
 
-**Expected inputs** -> `Dictionnary` with one key equal to `geometry_holder` which contains a `Geometry` class (Often received from a previous `GeometryConverter` pipe).
+**Expected inputs** -> `Dictionary` with one key equal to `geometry_holder` which contains a `Geometry` class (Often received from a previous `GeometryConverter` pipe).
 
 **Output** -> [geojson python package](https://github.com/jazzband/geojson) object.
 
@@ -197,7 +197,7 @@ Generates a `Layer` file following the [Layer specification](https://github.com/
 * `id` -> Id of the layer, should be only composed of [a-z0-9_] and it should be unique among all the rules. Default value if not provided is the name of the YAML file of this rule.
 * `file_name` -> The file name for the generated file.
 * `updates` -> When are the data updated.
-* `doc` -> Dictionnary containing documentation of the layer:
+* `doc` -> Dictionary containing documentation of the layer:
     * `description` -> Description of the layer.
     * `why_problem` -> Why is there a problem with the data on this layer.
     * `how_to_fix` -> How to fix data on this layer.

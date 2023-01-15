@@ -8,7 +8,7 @@ def resolve_all(data_to_resolve: Any, resolver_data: Dict, ) -> Any:
         of type DynamicValue. The resolved data are resolved again if they also contain
         DynamicValue.
 
-        Parameter resolver_data is the data dictionnary used to resolve the dynamic values.
+        Parameter resolver_data is the data dictionary used to resolve the dynamic values.
     """
     while(is_resolvable(data_to_resolve)):
         data_to_resolve = resolve_one(data_to_resolve, resolver_data)
@@ -18,11 +18,11 @@ def resolve_one(data_to_resolve: Any, resolver_data: Dict, ) -> Any:
     """
         Resolves every DynamicValue of the given data_to_resolve.
         If the given data is an Iterable all values of type DynamicValue
-        are resolved. If the given data is a Dictionnary every keys and values
+        are resolved. If the given data is a Dictionary every keys and values
         are resolved if of type DynamicValue.
     """
     if isinstance(data_to_resolve, Iterable):
-        #Resolve dictionnary by trying to resolve each key and each value.
+        #Resolve dictionary by trying to resolve each key and each value.
         if isinstance(data_to_resolve, Dict):
             new_dict = dict()
             for k, v in data_to_resolve.items():
@@ -42,11 +42,11 @@ def is_resolvable(data: Any) -> bool:
     """
         Checks if the given data contains any DynamicValue which
         is resolvable. If the data is an Iterable every value are checked.
-        Also, if the data is a Dictionnary every keys and every values are checked.
+        Also, if the data is a Dictionary every keys and every values are checked.
     """
     if isinstance(data, Iterable):
         if isinstance(data, Dict):
-            #Checks all the keys and values of the dictionnary.
+            #Checks all the keys and values of the dictionary.
             return _contains_dynamic_value(data.keys()) \
                 or _contains_dynamic_value(data.values())
         else:

@@ -13,6 +13,6 @@ class DynamicValue(metaclass=ABCMeta):
     def resolve(self, data: Dict) -> Any:
         """
             Assigns a concrete value to the dynamic value
-            based on the input data dictionnary.
+            based on the input data dictionary.
         """
         return

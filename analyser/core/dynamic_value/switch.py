@@ -13,7 +13,7 @@ class Switch(DynamicValue):
 
     def resolve(self, data: Dict) -> Any:
         if self.expression not in data:
-            raise Exception(f'The expression {self.expression} was not found in the input dictionnary.')
+            raise Exception(f'The expression {self.expression} was not found in the input dictionary.')
         
         if data[self.expression] not in self.cases:
             raise Exception(f'The case {data[self.expression]} is not in the configured switch cases: {list(self.cases.keys())}')

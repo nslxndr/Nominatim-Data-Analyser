@@ -67,7 +67,7 @@ class Pipe(metaclass=ABCMeta):
             If the data name provided exists in the dictionary it gets pop out and it gets returned. 
             But if it doesn't exist, the default value provided is returned (None by default).
 
-            if the required value is set to True and if the data can't be found, a YAMLSyntaxException is raised.
+            If the required value is set to True and if the data can't be found, a YAMLSyntaxException is raised.
         """
         if name in self.data:
              return self.data.pop(name)

@@ -59,4 +59,4 @@ QUERY:
                   Check that the addr:interpolation tag and change it to one
                   of the legal values, if it is wrong. Check that the
                   interpolation line has a node with addr:housenumber at the
-                  beginning and end and check that the values are senisble.
+                  beginning and end and check that the values are sensible.

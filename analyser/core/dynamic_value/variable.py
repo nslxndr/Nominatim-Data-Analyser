@@ -11,6 +11,6 @@ class Variable(DynamicValue):
 
     def resolve(self, data: Dict) -> Any:
         if self.name not in data:
-            raise Exception(f'The variable name {self.name} was not found in the input dictionnary.')
+            raise Exception(f'The variable name {self.name} was not found in the input dictionary.')
 
         return data[self.name]

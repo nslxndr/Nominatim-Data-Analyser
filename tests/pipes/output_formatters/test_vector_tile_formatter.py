@@ -7,10 +7,10 @@ def test_process_vector_tile_formatter(vector_tile_formatter: VectorTileFormatte
                                        tmp_path,
                                        monkeypatch) -> None:
     """
-        test the process() method.
+        Test the process() method.
         A temporary folder is used as the base folder.
 
-        the 'test_folder' doesn't exist initially and should be well
+        The 'test_folder' doesn't exist initially and should be well
         created by the method.
 
         The call to Tippecanoe is mocked to nothing because we dont want

@@ -97,21 +97,21 @@ Here, the assembled sub-pipeline will be composed of a `GeoJSONFeatureConverter`
 
 ### !variable
 
-The `!variable` type is used to create a value which will be resoled dynamically at runtime depending on the input data. The variable has a name which will be looked up 
-in the data dictionnary given to resolve this variable in the python code:
+The `!variable` type is used to create a value which will be resolved dynamically at runtime depending on the input data. The variable has a name which will be looked up 
+in the data dictionary given to resolve this variable in the python code:
 
 ```yaml
 - address: !variable address
 ```
 
-Here the YAML Loader will automatically asigns a `Variable` object to the value of the key `address`. This `Variable` can then be resolved by getting a data dictionnary as input. It will look for the `address` key in this dictionnary and it will return its value.
+Here the YAML Loader will automatically assign a `Variable` object to the value of the key `address`. This `Variable` can then be resolved by getting a data dictionary as input. It will look for the `address` key in this dictionary and it will return its value.
 
 More explanations on the DynamicValue type can be found in the [DynamicValue chapter](Dynamic-Value.md).
 
 ### !switch
 
-The `!switch` type is used to create a switch condition in the YAML spécification. The switch is a dynamic value which will be resolved at runtime depending on the data 
-dictionnary given to resolve it.
+The `!switch` type is used to create a switch condition in the YAML specification. The switch is a dynamic value which will be resolved at runtime depending on the data 
+dictionary given to resolve it.
 
 It works the same way as the [switch statement](https://en.wikipedia.org/wiki/Switch_statement) in many programming language. If we take the following JavaScript switch statement as an example:
 
@@ -137,7 +137,7 @@ It can be recreated in our YAML Specification like this:
       'R': Relation
 ```
 
-Here the YAML Loader will automatically asigns a `Switch` object to the value of the key `our_value`. This `Switch` can then be resolved by getting a data dictionnary as input.
+Here the YAML Loader will automatically assign a `Switch` object to the value of the key `our_value`. This `Switch` can then be resolved by getting a data dictionary as input.
 It will look for the key equal to the expression `geometryType`. Then, if the value assigned to this key is for example equal to `'N'`, the value `Node` will be returned.
 
 More explanations on the DynamicValue type can be found in the [DynamicValue chapter](Dynamic-Value.md).

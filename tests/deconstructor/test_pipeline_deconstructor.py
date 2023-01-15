@@ -240,7 +240,7 @@ def test_raise_event(pipeline_deconstructor: PipelineDeconstructor) -> None:
 
 def test_init_event_callbacks(pipeline_deconstructor: PipelineDeconstructor) -> None:
     """
-        Test the initialization of the _event_callbacks dictionnary 
+        Test the initialization of the _event_callbacks dictionary 
         through the _init_event_callbacks() method.
     """
     #the _init_event_callbacks() is initally called in the constructor.

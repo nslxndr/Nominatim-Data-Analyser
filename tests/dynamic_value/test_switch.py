@@ -16,14 +16,14 @@ def test_resolve_switch_ok(switch: Switch) -> None:
 def test_resolve_switch_expression_dont_exist(switch: Switch) -> None:
     """
         Test the resolve() method of the Switch class by using a data
-        dictionnary which doesn't contain the switch expression in its keys.
+        dictionary which doesn't contain the switch expression in its keys.
     """
     data = {
         'test_key1': 'test_val1',
         'test_key2': 'case2',
         'test_key2': 'test_val3'
     }
-    with pytest.raises(Exception, match='The expression test_expression was not found in the input dictionnary.'):
+    with pytest.raises(Exception, match='The expression test_expression was not found in the input dictionary.'):
         switch.resolve(data)
 
 def test_resolve_switch_case_dont_exist(switch: Switch) -> None:

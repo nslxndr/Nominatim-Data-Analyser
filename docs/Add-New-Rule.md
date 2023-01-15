@@ -1,7 +1,7 @@
 # Add a basic rule
 To add a new rule, a YAML Rule file should be created inside the `analyser/rules_specifications` folder. The YAML file name should be unique and it will be equal to the name of the rule (as much as possible).
 
-The content of the file should follows the [YAML Rule Specification](YAML-Rule-Specification.md) format.
+The content of the file should follow the [YAML Rule Specification](YAML-Rule-Specification.md) format.
 
 # Create custom pipes (python code)
 
